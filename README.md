@@ -143,3 +143,42 @@ and the ~0.45 V diode drop eats the last sliver, so it actually **stalls at the 
 The RATE pot's *resistance* contribution (its Thévenin source R looking back into the wiper) only swings from 0 to about **25K** — parallel combination of its two halves — and even at max that changes `f` by ~5%. The 20:1 rate span is entirely the *voltage* division, which is a multiplier, not a term you add to the ohms.
 
 If you want the classic slow-LFO window, scale **C1**: 470 n → ~0.1–3 Hz, 1 µF → ~0.05–1.4 Hz.
+
+
+
+It depends on what you want it to modulate, but here are the anchor points:
+
+| Use | Rate | Period |
+|---|---|---|
+| Slow evolving pad / drone movement | 0.01–0.1 Hz | 10–100 s |
+| Once per bar (120 BPM, 4/4) | 0.5 Hz | 2 s |
+| Once per beat (120 BPM) | 2 Hz | 0.5 s |
+| Rhythmic "wobble" | 1–8 Hz | — |
+| Vibrato / tremolo | 4–8 Hz | — |
+| Buzzy / edge-of-audio modulation | 20–30 Hz | — |
+| Audio-rate (through-zero FM, AM, LFO-as-oscillator) | 30 Hz–2 kHz | — |
+
+## The all-rounder target
+
+A standalone modulation LFO wants roughly **0.05 Hz (≈20 s) to ~20 Hz** — that covers "slow filter sweep" up through "vibrato." The catch is that's a ~400:1 span, and a single knob over that range feels terrible with a linear taper (everything useful is crammed into the last few degrees). So real LFOs do one of:
+
+- **Tapered pot** — reverse-log / "C" taper on RATE so the slow-to-medium zone gets most of the rotation.
+- **Range switch** — a 2- or 3-position switch that swaps the timing cap, e.g. slow / med / fast.
+- Both.
+
+Extending the top past ~30 Hz into audio rate is a nice bonus but a separate design goal — this TL074 + diode-shaper topology isn't built for clean audio-rate output, so I'd not chase it here.
+
+## For your circuit
+
+Your span ratio is locked at about `(R_RATE + R4)/R4 ≈ 22:1` by the RATE divider. C1 just slides that 22:1 window up or down:
+
+| C1 | Range | Character |
+|---|---|---|
+| 47 nF (now) | ~1.4–30 Hz | fast LFO — no slow sweeps |
+| **100 nF** | **~0.7–14 Hz** | good general-purpose single range |
+| 220 nF | ~0.3–6 Hz | slow/medium |
+| 1 µF | ~0.06–1.4 Hz | slow-only |
+
+My suggestion: **C1 = 100 nF** for a better single-range LFO, plus a **SPDT range switch** paralleling a larger cap (say +2.2 µF) to drop into a slow mode (~0.03–0.6 Hz) when you want it. And swap RATE to a reverse-log pot.
+
+Don't try to widen the 22:1 span much by shrinking R4 — the steering diodes need the wiper voltage to stay above ~1 V to keep oscillating, so the bottom of the knob just goes mushy and stalls rather than getting genuinely slow. Sliding the window with C1 (or switching it) is the reliable lever.
