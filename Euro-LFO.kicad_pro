@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 0,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -634,6 +634,12 @@
           "label": "LCSC",
           "name": "LCSC",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field6",
+          "name": "Field6",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -684,7 +690,7 @@
         "uuid": "44490297-4347-4afa-aed9-37e2f7652ec0"
       }
     ],
-    "used_designators": "#FLG1-3,PWM\\-OUT1,TRI\\-OUT1,SQUARE\\-OUT1,INV\\-OUT1,J1-6,RANGE1,SHAPE1,OFFSET\\-OUT1,PULSE\\-OUT1,OFFSET1-2,RATE1,Q1-2,RV1-4,TRI/SAW\\-OUT1,U1-3,C1-7,D1-5,#PWR1-35,VAR\\-OUT1-2,R1-24",
+    "used_designators": "#FLG1-3,PWM\\-OUT1,TRI\\-OUT1,SQUARE\\-OUT1,INV\\-OUT1,J1-6,RANGE1,SHAPE1,OFFSET\\-OUT1,PULSE\\-OUT1,OFFSET1-2,RATE1,Q1-2,RV1-4,TRI/SAW\\-OUT1,C1-7,U1-3,D1-5,#PWR1-35,VAR\\-OUT1-2,R1-24",
     "variants": []
   },
   "sheets": [
