@@ -3641,7 +3641,7 @@
 	)
 	(text "CONTROL BOARD"
 		(exclude_from_sim no)
-		(at 105.41 123.19 0)
+		(at 133.35 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3786,16 +3786,16 @@
 		(uuid "a85a31d5-ca60-430a-b296-84caabee61da")
 	)
 	(junction
-		(at 144.78 173.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c43b18ff-83ea-444f-bc62-1c9dafca68d7")
-	)
-	(junction
 		(at 78.74 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5ff256e-c18a-4e4d-ac36-e83953d8d554")
+	)
+	(junction
+		(at 144.78 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d72643ee-ee62-44e2-9265-c9a144021926")
 	)
 	(junction
 		(at 243.84 76.2)
@@ -5247,7 +5247,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 173.99) (xy 144.78 176.53)
+			(xy 144.78 173.99) (xy 144.78 175.26)
 		)
 		(stroke
 			(width 0)
@@ -5257,7 +5257,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 181.61) (xy 116.84 182.88)
+			(xy 116.84 181.61) (xy 116.84 185.42)
 		)
 		(stroke
 			(width 0)
@@ -5517,7 +5517,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 184.15) (xy 144.78 185.42)
+			(xy 144.78 182.88) (xy 144.78 185.42)
 		)
 		(stroke
 			(width 0)
@@ -5674,6 +5674,16 @@
 			(justify right bottom)
 		)
 		(uuid "1f073f55-3b43-4ea1-af77-4d121344923a")
+	)
+	(label "PWR_GND_IN"
+		(at 52.07 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23ae70af-6a25-43d2-9593-3f19b7e6bc47")
 	)
 	(label "SHP_O"
 		(at 134.62 110.49 0)
@@ -5855,6 +5865,16 @@
 		)
 		(uuid "7e308a87-bfe1-46a3-8472-8cf650131ee7")
 	)
+	(label "PWR_-_IN"
+		(at 29.21 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8083b90c-eb15-4721-bfb2-2a9a220d5371")
+	)
 	(label "GND_O"
 		(at 172.72 134.62 0)
 		(effects
@@ -5864,6 +5884,16 @@
 			(justify left bottom)
 		)
 		(uuid "86802923-1df1-4e46-bee4-6b3ce47cd723")
+	)
+	(label "PWR_+_IN"
+		(at 26.67 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bd8d468-199e-4c7e-be8b-859a88b4827d")
 	)
 	(label "LED_I"
 		(at 111.76 95.25 180)
@@ -6430,7 +6460,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074CDR"
+		(property "Value" "LM324DT"
 			(at 46.99 58.166 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6451,7 +6481,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm324.pdf"
 			(at 49.53 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6462,7 +6492,7 @@
 				)
 			)
 		)
-		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
+		(property "Description" "Quad op-amp LM324DT (pin-compatible with TL074), SOIC-14"
 			(at 48.26 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -6473,7 +6503,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C6961"
+		(property "LCSC" "C71035"
 			(at 48.26 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7879,7 +7909,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074CDR"
+		(property "Value" "LM324DT"
 			(at 233.426 57.404 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7900,7 +7930,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm324.pdf"
 			(at 236.22 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7911,7 +7941,7 @@
 				)
 			)
 		)
-		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
+		(property "Description" "Quad op-amp LM324DT (pin-compatible with TL074), SOIC-14"
 			(at 234.95 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -7922,7 +7952,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C6961"
+		(property "LCSC" "C71035"
 			(at 234.95 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8050,7 +8080,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17752"
+		(property "LCSC" "C17415"
 			(at 62.23 184.15 90)
 			(hide yes)
 			(show_name no)
@@ -8412,6 +8442,17 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 220.98 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 220.98 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9040,7 +9081,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074CDR"
+		(property "Value" "LM324DT"
 			(at 125.476 62.738 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9061,7 +9102,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm324.pdf"
 			(at 128.27 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9072,7 +9113,7 @@
 				)
 			)
 		)
-		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
+		(property "Description" "Quad op-amp LM324DT (pin-compatible with TL074), SOIC-14"
 			(at 127 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -9083,7 +9124,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C6961"
+		(property "LCSC" "C71035"
 			(at 127 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -9799,7 +9840,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17726"
+		(property "LCSC" "C17520"
 			(at 55.88 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -9937,7 +9978,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074CDR"
+		(property "Value" "LM324DT"
 			(at 252.73 83.058 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9958,7 +9999,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm324.pdf"
 			(at 255.27 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -9969,7 +10010,7 @@
 				)
 			)
 		)
-		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
+		(property "Description" "Quad op-amp LM324DT (pin-compatible with TL074), SOIC-14"
 			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9980,7 +10021,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C6961"
+		(property "LCSC" "C71035"
 			(at 254 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10052,10 +10093,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b0f5c9c5-69cd-44ad-84b1-f8f8b945477e")
 		(property "Reference" "D4"
-			(at 53.6575 153.67 0)
+			(at 53.34 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10065,7 +10105,7 @@
 			)
 		)
 		(property "Value" "SS14 (40 V 1 A Schottky)"
-			(at 53.6575 156.21 0)
+			(at 45.72 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10199,7 +10239,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17752"
+		(property "LCSC" "C17415"
 			(at 62.23 160.02 90)
 			(hide yes)
 			(show_name no)
@@ -10306,7 +10346,7 @@
 	)
 	(symbol
 		(lib_id "power:-12V")
-		(at 116.84 182.88 180)
+		(at 116.84 185.42 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10317,7 +10357,7 @@
 		(fields_autoplaced yes)
 		(uuid "c2ea0066-2367-4d0c-b3e7-879bf6201d6f")
 		(property "Reference" "#PWR016"
-			(at 116.84 179.07 0)
+			(at 116.84 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10328,7 +10368,7 @@
 			)
 		)
 		(property "Value" "-12V"
-			(at 116.84 187.96 0)
+			(at 116.84 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10338,7 +10378,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 116.84 182.88 0)
+			(at 116.84 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10349,7 +10389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 182.88 0)
+			(at 116.84 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10360,7 +10400,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"-12V\""
-			(at 116.84 182.88 0)
+			(at 116.84 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10812,7 +10852,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TL074CDR"
+		(property "Value" "LM324DT"
 			(at 104.14 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10834,7 +10874,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/lm324.pdf"
 			(at 120.65 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -10845,7 +10885,7 @@
 				)
 			)
 		)
-		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
+		(property "Description" "Quad op-amp LM324DT (pin-compatible with TL074), SOIC-14"
 			(at 119.38 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -10856,7 +10896,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C6961"
+		(property "LCSC" "C71035"
 			(at 119.38 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -11095,7 +11135,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17557"
+		(property "LCSC" "C17470"
 			(at 46.99 44.45 90)
 			(hide yes)
 			(show_name no)
@@ -11495,7 +11535,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 144.78 180.34 0)
+		(at 144.78 179.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11505,7 +11545,7 @@
 		(dnp no)
 		(uuid "e6222c3f-41e9-495b-89d0-0b1c8748a14d")
 		(property "Reference" "C3"
-			(at 152.4 180.34 0)
+			(at 152.4 179.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11515,7 +11555,7 @@
 			)
 		)
 		(property "Value" "100 nF 50 V X7R"
-			(at 154.94 184.15 0)
+			(at 154.94 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11525,7 +11565,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 145.7452 184.15 0)
+			(at 145.7452 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11536,7 +11576,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 180.34 0)
+			(at 144.78 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11547,7 +11587,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 144.78 180.34 0)
+			(at 144.78 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11558,7 +11598,7 @@
 			)
 		)
 		(property "LCSC" "C49678"
-			(at 144.78 180.34 0)
+			(at 144.78 179.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

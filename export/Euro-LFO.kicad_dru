@@ -131,9 +131,3 @@
 	(constraint clearance (min 0.127mm))
 )
 
-
-# Jacks INV/TRI are nested on purpose (bodies 1.6 mm apart; only pin courtyards overlap),
-# and the mouse-bite tabs sit next to the jacks at the board edge.
-(rule "jacks and mouse-bite tabs"
-	(condition "A.Reference == 'REF**' || B.Reference == 'REF**' || (A.Reference == '*-OUT1' && B.Reference == '*-OUT1')")
-	(constraint courtyard_clearance (min -10mm)))

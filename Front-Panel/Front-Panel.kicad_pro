@@ -501,7 +501,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Euro-LFO.kicad_pro",
+    "filename": "Front-Panel.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -746,20 +746,7 @@
     "used_designators": "#FLG1-3,PWM\\-OUT1,TRI\\-OUT1,SQUARE\\-OUT1,INV\\-OUT1,J1-6,RANGE1,SHAPE1,OFFSET\\-OUT1,PULSE\\-OUT1,OFFSET1-2,RATE1,Q1-2,RV1-4,TRI/SAW\\-OUT1,U1-3,C1-7,D1-5,#PWR1-35,VAR\\-OUT1-2,R1-24",
     "variants": []
   },
-  "sheets": [
-    [
-      "44490297-4347-4afa-aed9-37e2f7652ec0",
-      "Root"
-    ],
-    [
-      "98245a8b-2223-425f-8ed3-a1aa663d292a",
-      "Jacks"
-    ],
-    [
-      "c9616539-e095-4839-8c1d-97c8102aaef6",
-      "Pots"
-    ]
-  ],
+  "sheets": [],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

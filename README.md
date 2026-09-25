@@ -96,10 +96,11 @@ As RATE turns down, `V_th` falls and stretches the period:
 ## Notes
 
 - **V_sat** ≈ ±10.5 V (TL074 stops ~1.5 V short of the rails). It drops out of the ideal formula — bigger swing = taller triangle *and* faster ramp, cancels.
+- **Op-amp is now an LM324DT** (JLCPCB basic part C71035, pin-compatible with the TL074). Its swing is asymmetric — about +10.5 V but down to within a few hundred mV of −12 V — so the Schmitt thresholds are uneven: expect a ~0.5 V DC offset on the triangle and SHAPE's 50 % point shifted slightly off centre. Its ~0.4 V/µs slew gives ~50 µs square-wave edges, irrelevant at LFO rates. A TL074 still drops straight in if you want the symmetric JFET behaviour.
+- Comparator propagation delay with the LM324 is a few µs vs a 33 ms period → still negligible.
 - **V_f** ≈ 0.4–0.5 V steering-diode drop. It does *not* scale with V_sat, so it's what makes the low end nonlinear and adds mild temp drift (−2 mV/°C).
 - **To lower the whole range**, scale **C1** up (470 n → ~0.1–3 Hz; 1 µF → ~1.4 Hz max). Don't retune with R5/R1 — that moves amplitude and frequency together.
 - **C1 dielectric:** X7R drifts a few % — fine for an LFO. C0G only if you want the rate rock-stable.
-- Comparator propagation delay (~1–2 µs) vs a 33 ms period → negligible.
 
 
 
